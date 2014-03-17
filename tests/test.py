@@ -27,8 +27,12 @@ import sys
 import string
 import random
 
+# Run tests against current directory
+sys.path.insert(0,os.path.abspath('.'))
+sys.path.insert(0,os.path.abspath('..'))
 
 tests_dir = os.path.dirname(os.path.realpath(__file__))
+
 if tests_dir == '':
     tests_dir = '.'
 pynagbase = os.path.realpath("%s/%s" % (tests_dir, os.path.pardir))
